@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #375056;
+}
+main {
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.span2 {
+  grid-column: span 2;
+}
+
+main div {
+  border: 1px solid rgb(98, 106, 107);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 7rem;
+}
