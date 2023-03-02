@@ -1,13 +1,13 @@
 * {
   box-sizing: content-box;
-  font-size:  20px;
+  font-size: 20px;
   color: #b5abd8;
-  user-select-
 }
-html{
+html {
   background-color: #18122b;
   font-family: Cambria, serif;
 }
+
 body {
 }
 
@@ -44,6 +44,11 @@ main div:hover {
   padding: 1rem;
   background: linear-gradient(90deg, #4d455d38, #514a5e39);
 }
+.moveInGrid {
+  grid-column: auto;
+  grid-row: auto;
+}
+
 @media (min-width: 960px) {
   main {
     grid-template-columns: repeat(3, 1fr);
@@ -51,10 +56,14 @@ main div:hover {
   .span2 {
     grid-column: span 2;
   }
+  .moveInGrid {
+    grid-column: 3;
+    /*  grid-row: 1/4; */
+    grid-row: 1 / span 3;
+  }
 }
-
 @media (max-width: 180px) {
-  body::after{
+  body::after {
     content: 'TODO';
     width: 100%;
     min-height: 100vh;
@@ -70,4 +79,4 @@ main div:hover {
     justify-content: center;
     align-items: center;
   }
-} 
+}
