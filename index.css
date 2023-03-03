@@ -61,6 +61,15 @@ main div:hover {
     /*  grid-row: 1/4; */
     grid-row: 1 / span 3;
   }
+
+  .image {
+    padding: 0;
+  }
+  .image img {
+    border-radius: 0.2rem;
+    width: 100%;
+    height: auto;
+  }
 }
 @media (max-width: 180px) {
   body::after {
