@@ -41,14 +41,27 @@ main div {
   cursor: pointer;
 }
 main div:hover {
-  padding: 1rem;
   background: linear-gradient(90deg, #4d455d38, #514a5e39);
 }
 .moveInGrid {
   grid-column: auto;
   grid-row: auto;
 }
-
+.image {
+  padding: 0;
+}
+img[alt='f1'] {
+  border-radius: 0.2rem;
+  width: 100%;
+  height: auto;
+}
+.loading {
+  height: 5px;
+  background: #443c68;
+  position: fixed;
+  bottom: 0;
+  animation: loading 1s;
+}
 @media (min-width: 960px) {
   main {
     grid-template-columns: repeat(3, 1fr);
@@ -60,15 +73,6 @@ main div:hover {
     grid-column: 3;
     /*  grid-row: 1/4; */
     grid-row: 1 / span 3;
-  }
-
-  .image {
-    padding: 0;
-  }
-  .image img {
-    border-radius: 0.2rem;
-    width: 100%;
-    height: auto;
   }
 }
 @media (max-width: 180px) {
@@ -87,5 +91,14 @@ main div:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }
