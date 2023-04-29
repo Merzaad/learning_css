@@ -50,20 +50,26 @@ main div:hover {
   grid-column: auto;
   grid-row: auto;
 }
-.image {
-  padding: 0;
-}
+
 img[alt='f1'] {
   border-radius: 0.2rem;
   width: calc(100% - 1rem);
   height: auto;
 }
-.loading {
+
+#idSpecificity {
   height: 5px;
   background: #443c68;
   position: fixed;
   bottom: 0;
   animation: loading 1s;
+}
+.classSpecificity {
+  height: 5px;
+  background: #443c68;
+  position: fixed;
+  bottom: 0;
+  animation: none;
 }
 .buttons {
   display: flex;
@@ -86,6 +92,16 @@ img[alt='f1'] {
   background: #181823;
   opacity: 0.5;
   cursor: not-allowed;
+}
+.flex {
+  display: flex;
+  gap: 1px;
+}
+.flex [grow] {
+  flex-grow: 1;
+}
+.flex [shrink] {
+  flex-shrink: 1;
 }
 @media (min-width: 960px) {
   main {

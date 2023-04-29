@@ -3,7 +3,7 @@
   <head>
     <title>css battleground</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./index.css"">
+    <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
     <header>HEADER</header>
@@ -20,7 +20,7 @@
         <button type="button" disabled>button</button>
       </div>
       <div>3</div>
-      <div class="image">
+      <div>
         <img
           src="https://d2n9h2wits23hf.cloudfront.net/image/v1/static/6057949432001/a369fa8a-74d7-4cbb-9533-5443d345f623/20632378-b946-4356-8499-2dabf9a00188/1316x740/match/image.jpg"
           alt="f1"
@@ -30,8 +30,13 @@
       </div>
       <div class="moveInGrid">5</div>
       <div>6</div>
-      <div></div>
+      <div class="flex">
+        <div>1</div>
+        <div shrink>2</div>
+        <div grow>3</div>
+        <div>4</div>
+      </div>
     </main>
-    <div class="loading" />
+    <div class="classSpecificity" id="idSpecificity" />
   </body>
 </html>
