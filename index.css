@@ -103,6 +103,16 @@ img[alt='f1'] {
 .flex [shrink] {
   flex-shrink: 1;
 }
+.specificity {
+  background: red /*  !important */;
+}
+div#specificity {
+  background: yellowgreen;
+}
+#specificity[specificity] {
+  background: purple;
+}
+
 @media (min-width: 960px) {
   main {
     grid-template-columns: repeat(3, 1fr);
