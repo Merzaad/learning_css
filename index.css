@@ -95,16 +95,23 @@ img[alt='f1'] {
 }
 .flex {
   display: flex;
-  gap: 1px;
+  flex-flow: row wrap;
+  /* align-items: stretch; */
+  place-content: center;
+  height: 200px;
+  gap: 5px;
 }
-.flex [grow] {
+.flex [data-grow] {
   flex-grow: 1;
+  align-self: stretch;
 }
-.flex [shrink] {
-  flex-shrink: 1;
+.flex [data-shrink] {
+  flex-shrink: 2;
+  height: 75px;
 }
 .specificity {
   background: red /*  !important */;
+  flex: 0.5;
 }
 div#specificity {
   background: yellowgreen;
@@ -113,6 +120,14 @@ div#specificity {
   background: purple;
 }
 
+[data-flex] {
+  display: flex;
+  height: 180px;
+  align-items: stretch;
+}
+[data-flex] div {
+  border: 1px solid purple;
+}
 @media (min-width: 960px) {
   main {
     grid-template-columns: repeat(3, 1fr);
