@@ -35,9 +35,6 @@ main div {
   background: linear-gradient(90deg, #4d455d33, #514a5e31);
   border: 1px solid #443c68;
   border-radius: 0.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   padding: 0.5rem;
   transition-duration: 500ms;
@@ -123,10 +120,17 @@ div#specificity {
 [data-flex] {
   display: flex;
   height: 180px;
-  align-items: stretch;
+  width: 220px;
 }
 [data-flex] div {
   border: 1px solid purple;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100px;
+}
+
+[data-flex] #c {
+  flex-shrink: 3;
 }
 @media (min-width: 960px) {
   main {
