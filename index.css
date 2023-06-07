@@ -1,5 +1,6 @@
 :root {
   --txtColor: #b5abd8;
+  --txtColor2: #c44061;
 }
 * {
   box-sizing: border-box !important;
@@ -28,7 +29,6 @@ main {
   margin: auto;
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: 1fr;
 }
 
 main div {
@@ -42,10 +42,6 @@ main div {
 }
 main div:hover {
   background: linear-gradient(90deg, #4d455d38, #514a5e39);
-}
-.moveInGrid {
-  grid-column: auto;
-  grid-row: auto;
 }
 
 img[alt='f1'] {
@@ -132,6 +128,40 @@ div#specificity {
 [data-flex] #c {
   flex-shrink: 3;
 }
+.sizes {
+  display: flex;
+  max-width: 400px;
+}
+.sizes [data-ch] {
+  font-size: 16px;
+  word-break: break-all;
+  max-width: 1ch;
+  line-height: 0.5;
+}
+.sizes .percentageMarginAndPadding {
+  border: 1px solid purple;
+  padding: 10%; /* % of parent content width */
+  margin-left: 20%; /* % of parent content width */
+}
+.fancyBtn {
+  overflow: hidden;
+}
+.fancyBtn .background {
+  /* animation: rotate 2s infinite linear; */
+}
+.selectors div:first-of-type {
+  color: var(--txtColor2);
+  margin: 10px 0px;
+}
+.selectors [data-type*='B' i] {
+  color: turquoise;
+}
+.selectors [data-type^='a'] {
+  border-color: turquoise;
+}
+.selectors [data-type$='c'] {
+  box-shadow: 0px 0px 5px turquoise;
+}
 @media (min-width: 960px) {
   main {
     grid-template-columns: repeat(3, 1fr);
@@ -145,6 +175,7 @@ div#specificity {
     grid-row: 1 / span 3;
   }
 }
+
 @media (max-width: 180px) {
   body::after {
     content: 'TODO';
@@ -164,6 +195,14 @@ div#specificity {
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loading {
   from {
     width: 0%;
