@@ -37,7 +37,6 @@ main div {
   border-radius: 0.2rem;
   color: white;
   padding: 0.5rem;
-  transition-duration: 500ms;
   cursor: pointer;
 }
 main div:hover {
@@ -115,18 +114,17 @@ div#specificity {
 
 [data-flex] {
   display: flex;
-  height: 180px;
-  width: 220px;
+  height: 220px;
 }
-[data-flex] div {
+[data-flex] > div {
   border: 1px solid purple;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 100px;
+  flex-basis: 300px;
 }
 
 [data-flex] #c {
-  flex-shrink: 3;
+  flex-shrink: 2;
 }
 .sizes {
   display: flex;
@@ -143,12 +141,6 @@ div#specificity {
   padding: 10%; /* % of parent content width */
   margin-left: 20%; /* % of parent content width */
 }
-.fancyBtn {
-  overflow: hidden;
-}
-.fancyBtn .background {
-  /* animation: rotate 2s infinite linear; */
-}
 .selectors div:first-of-type {
   color: var(--txtColor2);
   margin: 10px 0px;
@@ -161,6 +153,17 @@ div#specificity {
 }
 .selectors [data-type$='c'] {
   box-shadow: 0px 0px 5px turquoise;
+}
+.dropDown {
+  transition: height 0.5s ease 0.2s;
+  height: 50px;
+  /*   transition-property: height, font-size;
+  transition-duration: 1s;
+  transition-timing-function: steps(10) ease-out;
+  transition-delay: 0.2s; */
+}
+.dropDown[data-drop='true'] {
+  height: 100px;
 }
 @media (min-width: 960px) {
   main {
@@ -192,22 +195,5 @@ div#specificity {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loading {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
   }
 }
