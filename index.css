@@ -8,7 +8,7 @@
   color: var(--txtColor);
 }
 html {
-  background-color: #18122b;
+  background-color: black;
   font-family: Cambria, serif;
 }
 
@@ -210,4 +210,31 @@ div#specificity {
     justify-content: center;
     align-items: center;
   }
+}
+
+.scroll-reveal > p {
+  display: inline;
+  margin: auto;
+  max-width: 80%;
+  color: hsla(0, 11%, 69%, 0.2);
+  background-image: linear-gradient(90deg, rgb(82, 82, 82), rgb(75, 126, 102));
+  background-clip: text;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  animation: reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: 20vh;
+  animation-range-end: 80vh;
+  text-align: justify;
+}
+  
+@keyframes reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.empty{
+  min-height: 100vh;
+  grid-column:  span 3 ;
 }

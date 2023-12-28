@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>css battleground</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="./index.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>HEADER</header>
-    <main>
-      <div class="span2">
-        The grid CSS property is a shorthand property that sets all of the explicit and implicit
-        grid properties in a single declaration. Using grid you specify one axis using
-        grid-template-rows or grid-template-columns, you then specify how content should auto-repeat
-        in the other axis using the implicit grid properties: grid-auto-rows, grid-auto-columns, and
-        grid-auto-flow.
+
+<head>
+  <title>css battleground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>HEADER</header>
+  <main>
+    <div class="span2">
+      The grid CSS property is a shorthand property that sets all of the explicit and implicit
+      grid properties in a single declaration. Using grid you specify one axis using
+      grid-template-rows or grid-template-columns, you then specify how content should auto-repeat
+      in the other axis using the implicit grid properties: grid-auto-rows, grid-auto-columns, and
+      grid-auto-flow.
+    </div>
+    <div class="buttons">
+      <button type="button">button</button>
+      <button type="button" disabled>button</button>
+    </div>
+    <div>3</div>
+    <div>
+      <img
+        src="https://d2n9h2wits23hf.cloudfront.net/image/v1/static/6057949432001/a369fa8a-74d7-4cbb-9533-5443d345f623/20632378-b946-4356-8499-2dabf9a00188/1316x740/match/image.jpg"
+        alt="f1" width="329" height="185" />
+    </div>
+    <div class="moveInGrid">5</div>
+    <div>6</div>
+    <div class="flex">
+      <div>1</div>
+      <div data-shrink>2</div>
+      <div data-grow>3</div>
+      <div class="specificity" id="specificity" specificity style="background: rgba(147, 147, 147, 0.408)">4
       </div>
-      <div class="buttons">
-        <button type="button">button</button>
-        <button type="button" disabled>button</button>
+    </div>
+    <div data-flex>
+      <div id="a"></div>
+      <div id="b"></div>
+      <div id="c""></div>
       </div>
-      <div>3</div>
-      <div>
-        <img
-          src="https://d2n9h2wits23hf.cloudfront.net/image/v1/static/6057949432001/a369fa8a-74d7-4cbb-9533-5443d345f623/20632378-b946-4356-8499-2dabf9a00188/1316x740/match/image.jpg"
-          alt="f1"
-          width="329"
-          height="185"
-        />
-      </div>
-      <div class="moveInGrid">5</div>
-      <div>6</div>
-      <div class="flex">
-        <div>1</div>
-        <div data-shrink>2</div>
-        <div data-grow>3</div>
-        <div
-          class="specificity"
-          id="specificity"
-          specificity
-          style="background: rgba(147, 147, 147, 0.408)"
-        >4
-        </div>
-      </div>
-      <div data-flex>
-        <div id="a"></div>
-        <div id="b"></div>
-        <div id="c""></div>
-      </div>
-      <div class="sizes">
+      <div class=" sizes">
         <p data-ch>ch</p>
         <div class="percentageMarginAndPadding">% margin and padding</div>
       </div>
       <div data-drop="false" class="dropDown" onclick="this.dataset.drop = this.dataset.drop === 'false'">
-          dropdown
+        dropdown
+      </div>
+      <div class="scroll-reveal">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make
+        </p>
       </div>
       <div class="selectors">
         <div>1</div>
         <div data-type="abc">2</div>
       </div>
       <div class="transition">
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-        <div class="transform" ></div>
-     </div>
-    </main>
-    <div class="classSpecificity" id="idSpecificity" />
-  </body>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+        <div class="transform"></div>
+      </div>
+      <div class="empty">empty</div>
+  </main>
+  <div class="classSpecificity" id="idSpecificity" />
+</body>
+
 </html>
